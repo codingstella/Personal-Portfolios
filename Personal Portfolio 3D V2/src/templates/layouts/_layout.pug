@@ -1,0 +1,13 @@
+include _mixins
+doctype html
+html(lang="en")
+  head
+    include _head
+
+  body(class=bodyClass)
+    .page(class=pageClass)
+      block content
+      .cursor
+    block scripts
+      script(src="js/app.js")
+      script(src="js/common.js")

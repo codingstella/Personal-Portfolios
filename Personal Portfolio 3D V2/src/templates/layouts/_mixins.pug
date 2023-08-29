@@ -1,0 +1,171 @@
+mixin i(name)
+	svg.icon(class='icon-' + name)
+		use(xlink:href='img/sprite.svg#icon-' + name)
+
+mixin header(classHeader, classBurger)
+	.header.js-header#header(class=classHeader)
+		.header__center.center
+			a.header__logo(href="index.html")
+				img.header__pic(src="img/logo.svg" alt="")
+			.header__social.header__social_main
+				a.header__link(href="#")
+					+i('dribbble')
+					| Dribbble
+				a.header__link(href="#")
+					+i('instagram')
+					| Instagram
+			button.header__burger.js-header-burger(class=classBurger)
+		.header__wrapper.js-header-wrapper
+			.header__preview
+				a.header__logo(href="index.html")
+					img.header__pic(src="img/logo-white.svg" alt="")
+				.header__img
+					img.header__pic(src="img/bg-header.png" alt="")
+			.header__center.center
+				.header__contacts
+					a.header__line(href="mailto:hello@ui8.net")
+						.header__icon
+							+i('email')
+						.header__text hello@ui8.net
+					.header__line
+						.header__icon
+							+i('place')
+						.header__text 
+							p 4074 Ebert Summit Suite 375
+							p Lake Leonardchester
+					a.header__line(href="tel:+441236547890")
+						.header__icon
+							+i('phone')
+						.header__text +44 123 654 7890 
+				nav.header__nav
+					a.header__item(href="#")
+						span About
+					a.header__item(href="#")
+						span Work
+					a.header__item(href="#")
+						span Services
+					a.header__item(href="#")
+						span Contact
+				.header__social.header__social_inner
+					a.header__link(href="#")
+						+i('dribbble')
+						| Dribbble
+					a.header__link(href="#")
+						+i('instagram')
+						| Instagram
+mixin wrapperDark
+	.wrapper.wrapper_dark
+		+contacts
+		+footer
+
+mixin figures
+	.figures
+		.figures__preview
+			img.figures__pic(src="img/figures-1.png" alt="")
+		.figures__preview
+			img.figures__pic.js-parallax(data-scale="1.6" data-orientation="up" src="img/figures-2.png" alt="")
+		.figures__preview
+			img.figures__pic.js-parallax(data-scale="1.3" data-orientation="up" src="img/figures-3.png" alt="")
+		.figures__preview
+			img.figures__pic(src="img/figures-4.png" alt="")
+		.figures__preview
+			img.figures__pic.js-parallax(data-scale="2.3" data-orientation="down" src="img/figures-5.png" alt="")
+		.figures__preview
+			img.figures__pic.js-parallax(data-scale="2" data-orientation="up" src="img/figures-6.png" alt="")
+
+mixin contacts
+	.contacts
+		.contacts__center.center
+			.contacts__container
+				.contacts__wrap
+					.contacts__stage.stage(data-aos="animation-scale-y") Say hello 👋
+					h2.contacts__title.h1(data-aos="animation-scale-y" data-aos-delay="200") Let’s Work <br>Together.
+					.contacts__info(data-aos="animation-scale-y" data-aos-delay="400") I’d love to meet up with you to discuss your venture, and potential collaborations.
+				.contacts__row
+					.contacts__details(data-aos="animation-translate-y")
+						a.contacts__line(href="mailto:hello@ui8.net")
+							.contacts__icon
+								+i('email')
+							.contacts__text hello@ui8.net
+						.contacts__line
+							.contacts__icon
+								+i('place')
+							.contacts__text 
+								p 4074 Ebert Summit Suite 375
+								p Lake Leonardchester
+						a.contacts__line(href="tel:+441236547890")
+							.contacts__icon
+								+i('phone')
+							.contacts__text +44 123 654 7890
+					form.contacts__form(data-aos="animation-translate-y" data-aos-delay="200")
+						.contacts__field.field
+							.field__wrap
+								input.field__input(type="text" name="name" placeholder="Name")
+								.field__icon
+									+i('profile')
+						.contacts__field.field
+							.field__wrap
+								input.field__input(type="email" name="email" placeholder="Email")
+								.field__icon
+									+i('send')
+						.contacts__field.field
+							.field__wrap
+								select.field__select(name="question")
+									option What are you working on?
+									option What are you working on? 2
+								.field__icon
+									+i('arrows')
+						.contacts__field.field.field_textarea
+							.field__wrap
+								textarea.field__textarea(name="message" placeholder="Message")
+								.field__icon
+									+i('message')
+						.contacts__btn
+							button.btn.btn_purple
+								span.btn__text Let’s Talk
+								+i('arrow-right')
+				.contacts__category.h5 Let’s connect
+				.contacts__social
+					.contacts__box(data-aos="animation-translate-y")
+						a.contacts__link(href="#")
+							+i('instagram')
+							.contacts__text Instagram
+					.contacts__box(data-aos="animation-translate-y" data-aos-delay="150")
+						a.contacts__link(href="#")
+							+i('instagram')
+							.contacts__text Instagram
+					.contacts__box(data-aos="animation-translate-y" data-aos-delay="300")
+						a.contacts__link(href="#")
+							+i('instagram')
+							.contacts__text Instagram
+					.contacts__box(data-aos="animation-translate-y" data-aos-delay="450")
+						a.contacts__link(href="#")
+							+i('instagram')
+							.contacts__text Instagram
+				+figures
+
+mixin footer
+	.footer
+		.footer__center.center
+			.footer__body
+				a.footer__logo(href="index.html")
+					img.footer__pic(src="img/logo-empty.svg" alt="")
+				.footer__wrap
+					.footer__title.h1 You only have one chance to make a first impression.
+					.footer__info.h4 Let’s make it an amazing one.
+				.footer__menu
+					a.footer__link(href="#") About Me
+					a.footer__link(href="#") Projects
+					a.footer__link(href="#") Contact
+					a.footer__link(href="#") Dribbble
+					a.footer__link(href="#") Instagram
+			.footer__bottom
+				.footer__copyright © 2020, UI8 LLC.
+				a.footer__scroll.js-scroll(href="#header") Back to top
+		.footer__bg
+			.footer__preview
+				img.footer__pic.js-parallax(data-scale="1.5" data-orientation="down" src="img/footer-cube-1.png" alt="")
+			.footer__preview
+				img.footer__pic.js-parallax(data-scale="1.8" data-orientation="up" src="img/footer-cube-1.png" alt="")
+
+

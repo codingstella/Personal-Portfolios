@@ -1,0 +1,122 @@
+---
+title: Case study
+---
+extends layouts/_layout
+block content
+	+header('', 'header__burger_dark')
+	.product
+		.product__head
+			.product__center.center
+				.product__wrap
+					.product__stage.stage(data-aos="animation-scale-y") Featured Work
+					h1.product__title.title.h1(data-aos="animation-scale-y" data-aos-delay="150") Collab Landing Page UI Kit.
+					.product__info.h5(data-aos="animation-scale-y" data-aos-delay="300") Epic landing page template for design startups
+				.product__box.product__box_show(data-aos="animation-translate-y")
+					.product__category Services Provided
+					ul.product__list
+						li Discovery & Strategy
+						li Branding
+						li Communication
+						li User Interface
+		.product__bg(style="background-image: url('img/product-pic-1.jpg')")
+		.product__body
+			.product__center.center
+				.product__box.product__box_hide(data-aos="animation-scale-y")
+					.product__category Services Provided
+					ul.product__list
+						li Discovery & Strategy
+						li Branding
+						li Communication
+						li User Interface
+				.product__row
+					.product__overview.h4(data-aos="animation-scale-y") Overview
+					.product__content.content(data-aos="animation-scale-y" data-aos-delay="200")
+						p Meet Collab, a fully-featured landing page kit including code, design files, and beautiful 3D illustrations editable in Figma.
+						p This package includes a responsive and fully animated landing page template with 24 sections. We've intentionally added a lot of different content to maximize the number of layout options. Drag, drop and mix different parts to quickly build your landing page in a matter of minutes.
+				.product__preview
+					img.product__pic.js-parallax(data-scale="1.6" data-orientation="right" src="img/product-pic-2.jpg" alt="")
+				.product__review
+					.product__author(data-aos="animation-scale-y")
+						.product__ava
+							img.product__pic(src="img/ava-1.jpg" alt="")
+						.product__details
+							.product__man.h5 Dash
+							.product__company UI8
+					.product__text(data-aos="animation-scale-y" data-aos-delay="200") “Be sure to check out the live preview and let us know your thoughts in the comments section below.”
+	.discover
+		.discover__center.center
+			h2.discover__title.h1(data-aos="animation-scale-y") Discover.
+			.discover__row
+				.discover__item(data-aos="animation-scale-y")
+					.discover__category.h5 Highlights.
+					ul.discover__list
+						li Fully Responsive (Valid HTML5 & CSS3)
+						li 1 Long Scrolling Page (24 Sections)
+						li Editable 3D Icons + Illustrations (In Figma)
+				.discover__item(data-aos="animation-scale-y" data-aos-delay="200")
+					.discover__category.h5 Features.
+					ul.discover__list
+						li Parallax + Micro-Interactions
+						li Figma Files Included
+						li Documentation + Support
+		.discover__circles
+		+figures
+	.desc
+		.desc__center.center
+			.desc__head
+				.desc__title.h4(data-aos="animation-scale-y") Approach
+				.desc__content.content(data-aos="animation-scale-y" data-aos-delay="200")
+					p Meet Collab, a fully-featured landing page kit including code, design files, and beautiful 3D illustrations editable in Figma.
+					p This package includes a responsive and fully animated landing page template with 24 sections. We've intentionally added a lot of different content to maximize the number of layout options. Drag, drop and mix different parts to quickly build your landing page in a matter of minutes.
+					p This product includes design + code. You should have some basic coding experience if you plan on modifying and or implementing the template.
+			.desc__list
+				mixin descPreview(src, delay)
+					a.desc__preview(href="#" data-aos="animation-translate-y" data-aos-delay=delay)
+						img.desc__pic(src=src alt="")
+						.desc__zoom
+							img.desc__pic(src="img/arrow-up-right.svg" alt="")
+				+descPreview('img/desc-pic-1.jpg', '')
+				+descPreview('img/desc-pic-2.jpg', '200')
+				+descPreview('img/desc-pic-3.jpg', '')
+				+descPreview('img/desc-pic-4.jpg', '200')
+			.desc__btns(data-aos="animation-scale-y")
+				button.desc__btn.btn.btn_dark
+					+i('arrow-left')
+					span.btn__text Prev
+				button.desc__btn.btn.btn_purple
+					span.btn__text Next
+					+i('arrow-right')
+	.wrapper.wrapper_gradient
+		.cases.cases_other
+			.cases__center.center
+				.cases__stage.stage(data-aos="animation-scale-y") You may also like
+				h2.cases__title.h1(data-aos="animation-scale-y" data-aos-delay="200") Look at My <br>Products.
+				.cases__container
+					.cases__slider.owl-carousel.js-slider-cases
+						mixin casesItem(src, delay)
+							a.cases__item(href="#" data-aos="animation-translate-y" data-aos-delay=delay)
+								.cases__preview
+									img.cases__pic(src=src alt="")
+									.cases__box Case <br>Study
+								.cases__body
+									h4.cases__info.h4 Collab Landing Page
+									.cases__text UI Kit, Coded Template
+						+casesItem('img/cases-pic-1.jpg', '')
+						+casesItem('img/cases-pic-7.jpg', '200')
+						+casesItem('img/cases-pic-3.jpg')
+						+casesItem('img/cases-pic-4.jpg')
+						+casesItem('img/cases-pic-5.jpg')
+						+casesItem('img/cases-pic-6.jpg')
+			.cases__figures
+				.cases__figure
+					img.cases__pic.js-parallax(data-scale="1.6" data-orientation="up" src="img/figure-2.png" alt="")
+				.cases__figure
+					img.cases__pic.js-parallax(data-scale="1.4" data-orientation="down" src="img/figure-3.png" alt="")
+		+wrapperDark
+
+
+
+
+
+
+
